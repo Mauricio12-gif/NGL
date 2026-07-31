@@ -6,181 +6,68 @@ import {
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
-console.log("SecretTalk JavaScript loaded");
+
+console.log("SecretTalk loaded");
 
 
 // SEND ANONYMOUS MESSAGE
 
-window.sendMessage = async function(){
+window.sendMessage = async function () {
 
     const messageInput = document.getElementById("message");
     const status = document.getElementById("status");
 
+
     const message = messageInput.value.trim();
 
 
-    if(message === ""){
+    if (message === "") {
 
         alert("Write a message first");
+
         return;
 
     }
 
 
-    try{
+    try {
+
 
         await addDoc(
 
             collection(db, "messages"),
 
             {
-
                 text: message,
-
                 sender: "Anonymous",
-
                 time: serverTimestamp()
-
             }
 
         );
 
 
-        status.innerHTML =
+        status.innerHTML = 
         "Message sent successfully ❤️";
 
 
         messageInput.value = "";
 
 
-        console.log("Message saved");
-
-    }
-
-
-    catch(error){
+    } 
+    
+    catch (error) {
 
 
-        console.log("Firebase error:", error);
-
-
-        status.innerHTML =
-        "Error sending message ❌";
-
-
-        alert(error.message);
-
-    }
-
-};    }
-
-
-
-    try{
-
-
-        await addDoc(
-
-            collection(db,"messages"),
-
-            {
-
-                text: message,
-
-                sender: "Anonymous",
-
-                time: serverTimestamp()
-
-            }
-
-        );
-
-
-
-        status.innerHTML =
-        "Message sent successfully ❤️";
-
-
-        messageInput.value = "";
-
-
-
-        console.log("Message saved to Firebase");
-
-
-    }
-
-
-    catch(error){
-
-
-        console.log(
+        console.error(
             "Firebase error:",
             error
         );
 
 
         status.innerHTML =
-        "Error sending message ❌";
-
-
-        alert(error.message);
+        "Message failed to send ❌";
 
 
     }
-
 
 };
-
-
-
-// Firebase connection test
-
-async function testFirebase(){
-
-
-    try{
-
-
-        await addDoc(
-
-            collection(db,"test"),
-
-            {
-
-                message:
-                "Firebase connected successfully",
-
-                time:
-                serverTimestamp()
-
-            }
-
-        );
-
-
-        console.log(
-            "Firebase connection works"
-        );
-
-
-    }
-
-
-    catch(error){
-
-
-        console.log(
-            "Firebase connection failed:",
-            error
-        );
-
-
-    }
-
-
-}
-
-
-
-testFirebase();
