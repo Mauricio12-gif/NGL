@@ -1,208 +1,77 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
-}
-
-
 body{
 
-    min-height:100vh;
+font-family:Arial,sans-serif;
 
-    background:
-    linear-gradient(
-        135deg,
-        #ff4d88,
-        #7b2cbf
-    );
+background:#ffeef5;
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
-    padding:20px;
+height:100vh;
 
 }
 
 
+.container{
 
-.app{
+background:white;
 
-    width:100%;
+padding:30px;
 
-    max-width:450px;
+border-radius:25px;
 
-    text-align:center;
+width:90%;
 
-    color:white;
+max-width:400px;
 
-}
+text-align:center;
 
-
-
-.logo{
-
-    width:80px;
-
-    height:80px;
-
-    background:white;
-
-    color:#ff4d88;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:40px;
-
-    margin:auto;
-
-    margin-bottom:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
 
 }
 
 
+.avatar{
 
-h1{
-
-    font-size:40px;
-
-    margin-bottom:10px;
+font-size:60px;
 
 }
-
-
-
-.tagline{
-
-    margin-bottom:25px;
-
-    font-size:17px;
-
-}
-
-
-
-.card{
-
-    background:
-    rgba(255,255,255,0.15);
-
-
-    backdrop-filter:blur(15px);
-
-
-    padding:25px;
-
-
-    border-radius:25px;
-
-
-    margin-bottom:20px;
-
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.2);
-
-}
-
-
-
-.card h2{
-
-    margin-bottom:20px;
-
-    font-size:22px;
-
-}
-
-
-
-input,
-textarea{
-
-    width:100%;
-
-    padding:15px;
-
-    border:none;
-
-    outline:none;
-
-    border-radius:25px;
-
-    margin-bottom:15px;
-
-    font-size:16px;
-
-}
-
 
 
 textarea{
 
-    height:120px;
+width:100%;
 
-    resize:none;
+height:150px;
+
+border-radius:20px;
+
+padding:15px;
+
+border:1px solid #ddd;
+
+margin:20px 0;
 
 }
-
 
 
 button{
 
-    width:100%;
+background:#ff4d88;
 
-    padding:15px;
+color:white;
 
-    border:none;
+border:none;
 
-    border-radius:30px;
+padding:15px 25px;
 
-    background:white;
+border-radius:30px;
 
-    color:#ff4d88;
+cursor:pointer;
 
-    font-size:16px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-
-
-button:hover{
-
-    transform:scale(1.05);
-
-}
-
-
-
-#messages{
-
-    background:white;
-
-    color:#333;
-
-    padding:15px;
-
-    border-radius:20px;
-
-    min-height:80px;
-
-    text-align:left;
+font-size:16px;
 
 }
