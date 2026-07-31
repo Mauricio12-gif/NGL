@@ -1,62 +1,25 @@
-// Firebase configuration
-
 import { initializeApp } from 
-"https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+"https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
 
-
-import { getFirestore } from 
-"https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
-
-
-
-import { getAuth } from 
-"https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
-
-
-
-
-// Replace these details with your Firebase project details
 
 const firebaseConfig = {
 
-    apiKey: "YOUR_API_KEY",
+    apiKey: "AIzaSyDWoOntz_Xgz1nxgSwjg9M86WmtJfn9Bmo",
 
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    authDomain: "secrettalk-d6fe6.firebaseapp.com",
 
-    projectId: "YOUR_PROJECT_ID",
+    projectId: "secrettalk-d6fe6",
 
-    storageBucket: "YOUR_PROJECT.appspot.com",
+    storageBucket: "secrettalk-d6fe6.firebasestorage.app",
 
-    messagingSenderId: "YOUR_SENDER_ID",
+    messagingSenderId: "273110228571",
 
-    appId: "YOUR_APP_ID"
+    appId: "1:273110228571:web:5ffc4fa713c4b6fc9fa97e"
 
 };
 
-
-
-
-// Initialize Firebase
 
 const app = initializeApp(firebaseConfig);
 
 
-
-// Database
-
-const db = getFirestore(app);
-
-
-
-// Authentication
-
-const auth = getAuth(app);
-
-
-
-// Export for script.js
-
-export {
-    db,
-    auth
-};
+export { app };
