@@ -34,6 +34,7 @@ window.sendMessage = async function () {
 
 
         await addDoc(
+            console.log("Trying to send message");
 
             collection(db, "messages"),
 
