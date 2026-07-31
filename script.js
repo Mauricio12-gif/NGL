@@ -1,74 +1,81 @@
 import { db } from "./firebase.js";
 
+
 import {
-    collection,
-    addDoc,
-    serverTimestamp
-} from "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+
+collection,
+
+addDoc,
+
+serverTimestamp
+
+} from 
+"https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
 
 
-console.log("SecretTalk loaded");
+
+window.sendMessage = async function(){
 
 
-// SEND ANONYMOUS MESSAGE
+const messageBox = document.getElementById("message");
 
-window.sendMessage = async function () {
-
-    const messageInput = document.getElementById("message");
-    const status = document.getElementById("status");
+const status = document.getElementById("status");
 
 
-    const message = messageInput.value.trim();
+const message = messageBox.value.trim();
 
 
-    if (message === "") {
 
-        alert("Write a message first");
+if(message === ""){
 
-        return;
+alert("Write a message first");
 
-    }
+return;
 
-
-    try {
+}
 
 
-        await addDoc(
-            console.log("Trying to send message");
 
-            collection(db, "messages"),
-
-            {
-                text: message,
-                sender: "Anonymous",
-                time: serverTimestamp()
-            }
-
-        );
+try{
 
 
-        status.innerHTML = 
-        "Message sent successfully ❤️";
+await addDoc(
+
+collection(db,"messages"),
+
+{
+
+text: message,
+
+time: serverTimestamp()
+
+}
+
+);
 
 
-        messageInput.value = "";
+
+status.innerHTML =
+"Message sent ❤️";
 
 
-    } 
-    
-    catch (error) {
+messageBox.value = "";
 
 
-        console.error(
-            "Firebase error:",
-            error
-        );
+}
 
 
-        status.innerHTML =
-        "Message failed to send ❌";
+catch(error){
 
 
-    }
+console.log(error);
+
+
+status.innerHTML =
+"Failed to send message ❌";
+
+
+}
+
 
 };
