@@ -6,6 +6,7 @@ import {
 collection,
 addDoc,
 serverTimestamp
+  alert("SecretTalk JavaScript loaded");
 
 } from 
 "https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
