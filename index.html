@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SecretTalk 💬</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <div class="logo">
+        💬
+    </div>
+
+
+    <h1>SecretTalk</h1>
+
+    <p class="tagline">
+        Send and receive anonymous messages.
+    </p>
+
+
+    <div class="card">
+
+
+        <h2>Create your profile</h2>
+
+
+        <input 
+        id="username"
+        placeholder="Choose a username">
+
+
+        <button onclick="createProfile()">
+            Create Profile
+        </button>
+
+
+    </div>
+
+
+
+    <div class="card">
+
+
+        <h2>Send Anonymous Message</h2>
+
+
+        <input 
+        id="receiver"
+        placeholder="Username">
+
+
+        <textarea 
+        id="message"
+        placeholder="Write your secret message...">
+        </textarea>
+
+
+        <button onclick="sendMessage()">
+            Send Anonymously ❤️
+        </button>
+
+
+    </div>
+
+
+
+    <div class="card">
+
+
+        <h2>Your Messages</h2>
+
+
+        <div id="messages">
+
+            No messages yet 💌
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script type="module" src="script.js"></script>
+
+
+</body>
+
+</html>
